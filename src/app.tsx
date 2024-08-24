@@ -13,9 +13,12 @@ const App = () => {
   );
 };
 
-const Child = memo(() => {
+const _Child = () => {
   console.log('Child renders');
   return <h2>Child</h2>;
-});
+};
+
+const Child = memo(() => null);
+Child.type = _Child;
 
 export default App;
