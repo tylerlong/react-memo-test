@@ -40,10 +40,12 @@ const auto = <P extends object>(Component: FunctionComponent<P>) => {
 
 const App = auto((props: { store: Store }) => {
   console.log('App renders');
+  const [counter, setCounter] = useState(0);
   const { store } = props;
   return (
     <>
       <h2>{store.count}</h2>
+      {counter}
       <Button
         onClick={() => {
           store.count += 1;
@@ -51,6 +53,7 @@ const App = auto((props: { store: Store }) => {
       >
         Click me
       </Button>
+      <Button onClick={() => setCounter(counter + 1)}>Click me</Button>
       <Child />
     </>
   );
@@ -58,7 +61,14 @@ const App = auto((props: { store: Store }) => {
 
 const Child = auto(() => {
   console.log('Child renders');
-  return <h2>Child</h2>;
+  const [counter, setCounter] = useState(0);
+  return (
+    <>
+      <h2>Child</h2>
+      {counter}
+      <Button onClick={() => setCounter(counter + 1)}>Click me</Button>
+    </>
+  );
 });
 
 export default App;
