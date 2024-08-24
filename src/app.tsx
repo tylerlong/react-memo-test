@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Button } from 'antd';
 
 const App = () => {
@@ -13,9 +13,9 @@ const App = () => {
   );
 };
 
-const Child = () => {
+const Child = memo(() => {
   console.log('Child renders');
   return <h2>Child</h2>;
-};
+});
 
 export default App;
