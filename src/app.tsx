@@ -1,21 +1,12 @@
+import type { FunctionComponent } from 'react';
 import React, { memo, useEffect, useRef, useState } from 'react';
 import { Button } from 'antd';
 import { manage, run, disposeSymbol } from 'manate';
 import type { ManateEvent } from 'manate/models';
 
-const App = () => {
-  const [count, setCount] = React.useState(0);
-  console.log('App renders');
-  return (
-    <>
-      <h2>{count}</h2>
-      <Button onClick={() => setCount(count + 1)}>Click me</Button>
-      <Child />
-    </>
-  );
-};
+import type { Store } from './store';
 
-const auto = (Component: React.FC) => {
+const auto = <P extends object>(Component: FunctionComponent<P>) => {
   const temp = (props) => {
     const render = () => Component(props);
     const prev = useRef<() => void>();
@@ -46,6 +37,24 @@ const auto = (Component: React.FC) => {
   };
   return memo(temp);
 };
+
+const App = auto((props: { store: Store }) => {
+  console.log('App renders');
+  const { store } = props;
+  return (
+    <>
+      <h2>{store.count}</h2>
+      <Button
+        onClick={() => {
+          store.count += 1;
+        }}
+      >
+        Click me
+      </Button>
+      <Child />
+    </>
+  );
+});
 
 const Child = auto(() => {
   console.log('Child renders');
