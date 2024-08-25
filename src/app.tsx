@@ -2,12 +2,12 @@ import type { FunctionComponent } from 'react';
 import React, { memo, useEffect, useRef, useState } from 'react';
 import { Button } from 'antd';
 import { manage, run, disposeSymbol } from 'manate';
-import type { ManateEvent } from 'manate/models';
+import type { Managed, ManateEvent } from 'manate/models';
 
 import type { Store } from './store';
 
 const auto = <P extends object>(Component: FunctionComponent<P>) => {
-  const temp = (props) => {
+  const temp = (props: P) => {
     const render = () => Component(props);
     const prev = useRef<() => void>();
     prev.current?.();
@@ -24,7 +24,7 @@ const auto = <P extends object>(Component: FunctionComponent<P>) => {
       }
       return dispose;
     }, []);
-    let managed = manage(props);
+    let managed: Managed<P> | undefined = manage(props);
     const [result, isTrigger] = run(managed, render);
     const [, refresh] = useState(0);
     const listener = (event: ManateEvent) => {
