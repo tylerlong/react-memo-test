@@ -3344,10 +3344,10 @@ magic-string@^0.30.10:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.5.0"
 
-manate@^0.6.5:
-  version "0.6.5"
-  resolved "https://registry.npmjs.org/manate/-/manate-0.6.5.tgz#c598cc257785f9ff5c5812cd40e4a5aaaaf7aee5"
-  integrity sha512-HXiSU/75tb0FmIShPr5z2UzRgYfixsfALNLmZc6Oi/yWZH8u+A/Qi268JvumoT/WJrufrUn2dCfvP6xTPilkXQ==
+manate@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.npmjs.org/manate/-/manate-0.7.1.tgz#064b60ceff78d0c64c33d12c82a5889056813182"
+  integrity sha512-DvEn79mp+qun7Y/FjxMygz9NQh4EI9+cnj56/ajgnG/gLfnzbVEAB15TCOPCzuUBMhwUvAhMtnUGmgJWOvisTw==
 
 mdn-data@2.0.14:
   version "2.0.14"
@@ -4587,20 +4587,20 @@ tslib@^2.4.0, tslib@^2.6.2:
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.7.0.tgz#d9b40c5c40ab59e8738f297df3087bf1a2690c01"
   integrity sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==
 
-tsx@^4.17.1:
-  version "4.17.1"
-  resolved "https://registry.npmjs.org/tsx/-/tsx-4.17.1.tgz#16e9294507797b67b253b8ab1becfe014f6ec60c"
-  integrity sha512-s+poJ84lg23SPBvxQbPmyJd/tlpeBKbOnOYmhKO54L6CR/NyCF8Sw7dqLUWLuscDnKkD31h1qqX0A4FIa9ysaA==
+tsx@^4.18.0:
+  version "4.18.0"
+  resolved "https://registry.npmjs.org/tsx/-/tsx-4.18.0.tgz#c5c6e8af9e7d162446ed22dc7b53dc4792bf920b"
+  integrity sha512-a1jaKBSVQkd6yEc1/NI7G6yHFfefIcuf3QJST7ZEyn4oQnxLYrZR5uZAM8UrwUa3Ge8suiZHcNS1gNrEvmobqg==
   dependencies:
     esbuild "~0.23.0"
     get-tsconfig "^4.7.5"
   optionalDependencies:
     fsevents "~2.3.3"
 
-ttpt@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.npmjs.org/ttpt/-/ttpt-0.11.2.tgz#7402bbeabc23067ce623c79e23a233e500a3dab7"
-  integrity sha512-uTa9KStY8kXfCM82NSGzmSaH9Q/J6h7F90lFD1qmpHLLqNeFWol73F1r28p/vwETc+hdYbHndLEaGYOlrDGKWg==
+ttpt@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npmjs.org/ttpt/-/ttpt-0.12.0.tgz#20e463f1219929768883def9d24ea786f09f85f3"
+  integrity sha512-RGaWh8YrA2CDivVNIo4XYJqwyiFaQvVlMNuqmcWHvOYscmpE8XJc5bA0hcwzj/mOQA1jXspKv6PoBAGKw3cq/g==
   dependencies:
     lodash "^4.17.21"
     shell-commands "^0.4.2"
